@@ -284,14 +284,15 @@ function App() {
     console.log("======== 2");
 
     const deploy = await TileDocument.create(ceramic, schema1, metadata);
-    console.log("deploy ====== 1 ", deploy);
-    console.log("deploy ====== 2 ", deploy.commitId.toString());
+    console.log("deploy schema ", deploy);
+    console.log("deploy schema id", deploy.id.toString());
+    console.log("deploy schema commit id ", deploy.commitId.toString());
 
     const dataDoc = await TileDocument.create(
       ceramic,
       {
-        title: "xuchen is testing",
-        message: "Hello World",
+        title: "xuchen is testing  我有点累",
+        message: "Hello World 今天晚上我想看电影",
       },
       {
         controllers: [ceramic.did.id],
